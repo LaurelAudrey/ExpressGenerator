@@ -16,7 +16,7 @@ partnerRouter.route('/')
 })
 .post((req, res, next) => {
     Partner.create(req.body)
-    .then(partners => {
+    .then(partner => {
         console.log('Partner Created ', partner);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
